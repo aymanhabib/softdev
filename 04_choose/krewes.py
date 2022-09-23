@@ -6,7 +6,7 @@ DISCO:
 
 QCC:
 
-OPS SUMMARY:
+OPS SUMMARY: Given a dictionary of periods with the class roster assigned to each, and a list with the period numbers, the function randomly chooses a number from the list of period numbers, stores it in the variable 'pd', and then accesses the roster for that period using the dictionary. The function then randomly selects a name from the roster and stores the name in the 'name' variable. Then, it prints out the period and the name.
 
 """
 import random
