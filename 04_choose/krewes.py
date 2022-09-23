@@ -2,7 +2,7 @@
 TNPG: VAT, Vivian Graeber, Ayman Habib, Talia Hsia
 
 DISCO:
-- FIles do not need an extension, the computer looks at the metadata inside the file
+- Files do not need an extension, the computer looks at the metadata inside the file
 
 QCC:
 
