@@ -1,13 +1,15 @@
 """
-TNPG: VAT, Vivian Graeber, Ayman Habib, Talia Hsia
+TNPG: Pink Oranges, Ryan Lau, Ayman Habib
 
 DISCO:
-- FIles do not need an extension, the computer looks at the metadata inside the file
+- We learned about .split and .read
+- We implemented fstrings
+    - When printing the pd number, fstrings automatically cast the int as a string
 
 QCC:
+- What is LI: (u + 4)%6 ?
 
-OPS SUMMARY: Given a dictionary of periods with the class roster assigned to each, and a list with the period numbers, the function randomly chooses a number from the list of period numbers, stores it in the variable 'pd', and then accesses the roster for that period using the dictionary. The function then randomly selects a name from the roster and stores the name in the 'name' variable. Then, it prints out the period and the name.
-
+OPS SUMMARY: Given a txt file with the period, name, and ducky name of every devo in Soft Dev, the program first establishes a dictionary with the period numbers as keys, and each key being empty. The program then iterates through the text input file, first separating each section of devo info with @@@, and then separating each piece of devo info with $$$. These pieces of info are then assigned to each key in the dictionary, depending on the period number. The program then uses .choice to randomly select a period, and then randomly selects a devo and its ducky from the selected period.
 """
 import random
 
