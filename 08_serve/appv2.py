@@ -43,7 +43,6 @@ def pick_occupation_with_choice():
 
     return random.choice(weighted_occupations)
 
-def display_list()
 
 @app.route("/")       #assign fxn to route
 def hello_world():
@@ -51,8 +50,10 @@ def hello_world():
     print(__name__)
     populate_occupations_with_csv()
     occupation = pick_occupation_with_choices()
-    return(occupation)
-    content = "TNPG: Tic-Tac, Talia Hsia, Ayman Habib, Craig Chen" +
+    content = "TNPG: Tic-Tac, Talia Hsia, Ayman Habib, Craig Chen \n"
+    content += occupation
+    return(content)
+    
 
 if __name__ == "__main__":  # true if this file NOT imported
     app.debug = True        # enable auto-reload upon code change
