@@ -50,8 +50,8 @@ def hello_world():
     print(__name__)
     populate_occupations_with_csv()
     occupation = pick_occupation_with_choices()
-    content = "TNPG: Tic-Tac, Talia Hsia, Ayman Habib, Craig Chen \n"
-    content += occupation
+    new_line = '\n'
+    content = f"TNPG: Tic-Tac, Talia Hsia, Ayman Habib, Craig Chen <br> <br> {occupation} <br> <br> From list: {occupations}"
     return(content)
     
 
