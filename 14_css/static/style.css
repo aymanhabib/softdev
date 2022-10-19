@@ -33,8 +33,9 @@ h3 {
 #nav-bar {
     color: white;
     font-weight: bold;
-    padding-right: 100px;
+    padding-right: 75px;
     padding-left:10px;
+    width:500px;
 }
 
 #bar-title {
