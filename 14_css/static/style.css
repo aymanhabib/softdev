@@ -25,14 +25,20 @@ body{
     background-color: #757776;
 }
 h3 {
-    margin-top: 0px;
     text-align: left;
     background-color: #757776;
+    margin: 0px;
 }
 
 #nav-bar {
     color: white;
     font-weight: bold;
+    padding-right: 100px;
+    padding-left:10px;
+}
+
+#bar-title {
+    color: black;
 }
 
 
