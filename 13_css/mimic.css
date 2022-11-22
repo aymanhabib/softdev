@@ -31,7 +31,6 @@ h3 {
 }
 
 #nav-bar {
-    margin:0;
     color: white;
     font-weight: bold;
 }
@@ -39,7 +38,7 @@ h3 {
 
 #all-contents-foo{
   display:flex;
-  justify-content: right; 
+  justify-content: right;
 }
 
 footer {

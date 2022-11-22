@@ -21,11 +21,11 @@ app.run()  # Q5: Where have you seen similar constructs in other languages?
 '''
 DISCO:
 QCC:
-0. Java
-1. It accesses a folder or directory
+0. Python
+1. It accesses a website
 2. It prints to the terminal
 3. It might print a file that would be inputted in place of '__name__"
-4. No, because there is no print statement associated with that line
+4. This will appear on a website. We know because we ran it.
 5. Java 
 ...
 INVESTIGATIVE APPROACH:
