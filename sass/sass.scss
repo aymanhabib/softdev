@@ -1,0 +1,42 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    li { display: inline-block; }
+  
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+  }
+
+  .button {
+    .mother {
+      background-color: white;
+      color: black;
+    }
+    .inactive {
+      background-color: gray;
+      color: white;
+    }
+    .son {
+      background-color: rgb(255, 132, 251);
+      color: white;
+    }
+    .daughter {
+      background-color: rgb(162, 48, 255);
+      color: white;
+    }
+  }
