@@ -1,0 +1,65 @@
+body {
+  background-color: #c69;
+  font: 100% Helvetica, sans-serif;
+  color: white;
+}
+
+#header {
+  background-color: white;
+  justify-content: center;
+  position: sticky;
+  margin-top: 0%;
+  margin: 0;
+  width: 100%;
+  max-height: 30%;
+  padding: 20px;
+}
+
+.uno button {
+  background: rgb(185, 255, 255);
+  width: 25%;
+  display: inline;
+}
+
+.dos button {
+  background: rgb(185, 255, 255);
+  width: 25%;
+  display: inline;
+}
+
+.firstFlop button {
+  background: rgb(185, 255, 255);
+  width: 25%;
+  display: inline;
+}
+
+.secondFlop button {
+  background: rgb(185, 255, 255);
+  width: 25%;
+  display: inline;
+}
+
+.btn-group button {
+  float: left;
+  padding: 10px 24px;
+}
+
+.subunit button {
+  padding: 10px 24px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=sass.css.map */

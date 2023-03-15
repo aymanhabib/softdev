@@ -1,0 +1,70 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$sl-color--hopbush: #c69;
+$mother-Btn: rgb(185, 255, 255);
+$btn-Size: 25%;
+
+body {
+  background-color: $sl-color--hopbush;
+  font: 100% $font-stack;
+  color: white;
+}
+
+#header {
+  background-color: white;
+  justify-content: center;
+  position: sticky;
+  margin-top: 0%;
+  margin: 0;
+  width: 100%;
+  max-height: 30%;
+  padding: 20px;
+}
+
+.uno button {
+  background: $mother-Btn;
+  width: $btn-Size;
+  display: inline;
+}
+
+.dos button {
+  background: $mother-Btn;
+  width: $btn-Size;
+  display: inline;
+}
+
+.firstFlop button {
+  background:rgb(185, 255, 255);
+  width: 25%;
+  display: inline;
+}
+
+.secondFlop button {
+  background:rgb(185, 255, 255);
+  width: 25%;
+  display: inline;
+}
+
+.btn-group button {
+  float: left;
+  padding: 10px 24px;
+}
+
+.subunit button{
+  padding: 10px 24px;
+}
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    li { display: inline-block; }
+  
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+  }
