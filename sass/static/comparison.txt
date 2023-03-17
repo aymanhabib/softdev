@@ -1,0 +1,17 @@
+---.SCSS---
+
+.container {
+    float: left;
+    width: 100%;
+    p {
+        color: #333;
+    }
+}
+
+---.SASS---
+
+.container
+    float: left
+    width: 100%
+    p
+        color: #333

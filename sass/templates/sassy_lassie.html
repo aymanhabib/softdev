@@ -209,14 +209,18 @@
                 </label> -->
             <h2>@EXTEND</h2>
                 <ul>Allows selectors to inherit styles from one another</ul>
+                <ul>Different from @mixin</ul>
             <h2>@AT-ROOT</h2>
-                @at-root puts styles within it at the root of the CSS document.
+                <ul>Puts styles within Sass document at the root of the CSS document</ul>
+                <ul>Not commonly used</ul>
+                <ul>Used for advanced nesting</ul>
             <h2>@ERROR</h2>
-                @error causes compilation to fail with an error message.
+                <ul>Causes compilation to fail with an error message</ul>
             <h2>@WARN</h2>
-                @warn prints a warning without stopping compilation entirely.
+                <ul>Prints a warning without stopping compilation entirely</ul>
             <h2>@DEBUG</h2>
-            @debug prints a message for debugging purposes.
+            <ul>Prints a message for debugging purposes</ul>
+            <ul>Can be used to double check values during compilation</ul>
             <h2>Flow Control</h2>
             Flow control rules like @if, @each, @for, and @while control whether or how many times styles are emitted.
             <table>
@@ -225,7 +229,7 @@
                 <th>@for evaluates a block a certain number of times.</th>
                 <th>@while evaluates a block until a certain condition is met.</th>
             </table>
-        </div> <!-- end mix-ins -->
+        </div> <!-- end @ rules -->
         <div>
             <h1 id="Operators">Operators</h1>
             <p> 	
@@ -237,6 +241,12 @@
                 <li>and, or, and not have the usual boolean behavior. Sass considers every value “true” except for false and null.</li>
                 <li>+, -, and / can be used to concatenate strings.</li>
             </p>
+            <h2>To demonstrate...</h2>
+                <p class="paragraph-1">Sassy Slay</p>
+                <p class="paragraph-2">Sassy Slay</p>
+                <p class="paragraph-3">Sassy Slay</p>
+                <p class="paragraph-4">Sassy Slay</p>
+                <p class="paragraph-5">Sassy Slay</p>
         </div> <!-- end operators -->
 
         <div>

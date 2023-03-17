@@ -1,10 +1,13 @@
 body {
   font: 100% Helvetica, sans-serif;
+  /* @error "You messed up!" */
+  /* @warn "Don't mess it up!" */
 }
 
 nav {
   background-color: #c69;
   color: #333;
+  /* @debug "color is: #333"; */
   width: auto;
 }
 nav ul {
@@ -76,15 +79,8 @@ nav .active {
   padding: 10px 24px;
 }
 
-.container {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 0px;
-}
-
 img {
-  width: 75%;
+  width: 50%;
 }
 
 switch {
@@ -141,6 +137,7 @@ input :focus {
   border-radius: 50%;
 }
 
+/* Extends example */
 .message-main, .warning, .error, .success, .message {
   border: 1px solid #ccc;
   padding: 10px;
@@ -157,6 +154,15 @@ input :focus {
 
 .warning {
   border-color: yellow;
+}
+
+/* @at-root example */
+foo {
+  margin: 0px;
+  /* @at-root */
+}
+foo .column {
+  background-color: black;
 }
 
 /*# sourceMappingURL=sass.css.map */

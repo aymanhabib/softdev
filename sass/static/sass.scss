@@ -6,11 +6,14 @@ $btn-Size: 25%;
 
 body {
   font: 100% $font-stack;
+  /* @error "You messed up!" */
+  /* @warn "Don't mess it up!" */
 }
 
 nav {
   background-color: $hopbush;
   color: $primary-color;
+  /* @debug "color is: #{$primary-color}"; */
   width: auto;
     ul {
       list-style-type: none;
@@ -145,6 +148,8 @@ input{
   }
 }
 
+/* Extends example */
+
 .message-main {
   border: 1px solid #ccc;
   padding: 10px;
@@ -170,3 +175,13 @@ input{
   @extend .message-main;
   border-color: yellow;
 }
+
+/* @at-root example */
+foo{
+  margin: 0px;
+  /* @at-root */ .column {
+    background-color: black;
+  }
+}
+
+
