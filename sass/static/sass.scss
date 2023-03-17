@@ -3,7 +3,6 @@ $primary-color: #333;
 $hopbush: #c69;
 $mother-Btn: rgb(185, 255, 255);
 $btn-Size: 25%;
-@import '_example.scss';
 
 body {
   font: 100% $font-stack;
@@ -151,4 +150,30 @@ input{
   ::before {
     border-radius: 50%;
   }
+}
+
+.message-main {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.message 
+{
+  @extend .message-main;
+}
+.success
+{
+  @extend .message-main;
+  border-color: green
+}
+.error
+{
+  @extend .message-main;
+  border-color: red;
+}
+.warning
+{
+  @extend .message-main;
+  border-color: yellow;
 }

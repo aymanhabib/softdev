@@ -185,18 +185,22 @@
         
         <div>
             <h1 id="At Rules">At Rules</h1>
-            <h2> Mix-Ins</h2>
-                MIXINS: do you have css classes with similar styles? Well you can create one “mixin” class with @mixin and include  which can then be used in tandem with the new classes you create
-                @mixin can take variables
-            <h2>Use</h2>
-                @use loads mixins, functions, and variables from other Sass stylesheets, and combines CSS from multiple stylesheets together.
-            <h2>Forward</h2>
-                @forward loads a Sass stylesheet and makes its mixins, functions, and variables available when your stylesheet is loaded with the @use rule.
-            <h2>Import</h2>
-                @import extends the CSS at-rule to load styles, mixins, functions, and variables from other stylesheets.
-            <h2>Include</h2>
-                @include makes it easy to re-use chunks of styles.
-            <h2>Function</h2>
+            <h2>@MIXIN</h2>
+                <ul>CSS Classes with similar styles?</ul>
+                <ul>Create one MIXIN class that can be mentioned in other classes!</ul>
+            <h2>@INCLUDE</h2>
+                <ul>Allows user to include mixins in classes</ul>
+            <h2>@IMPORT</h2>
+                <ul>Extends the CSS at-rule to load styles, mixins, functions, and variables from other stylesheets</ul>
+                <ul>Similar to @import in Java</ul>
+            <h2>@USE</h2>
+                <ul>Newer version of @import</ul>
+                <ul>Only imports desired module ONCE</ul>
+                <ul>Allows user to keep track of variables</ul> 
+            <h2>@FORWARD</h2>
+                <ul>Can be used prior to @use</ul>
+                <ul>"Forwards" mixins, functions, and variables from a stylesheet that are included in another stylesheet</ul>
+            <h2>@FUNCTION</h2>
                 @function defines custom functions that can be used in SassScript expressions.
                 <!-- Rounded switch -->
                 <!-- <label class="switch">

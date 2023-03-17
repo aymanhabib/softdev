@@ -1,8 +1,3 @@
-.example {
-  color: red;
-  size: 500px;
-}
-
 body {
   font: 100% Helvetica, sans-serif;
 }
@@ -144,6 +139,24 @@ input :focus {
 }
 .slider.round ::before {
   border-radius: 50%;
+}
+
+.message-main, .warning, .error, .success, .message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
 }
 
 /*# sourceMappingURL=sass.css.map */
