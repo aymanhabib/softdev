@@ -1,32 +1,64 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+$font-stack: 'Lexend', sans-serif;
+$primary-color: #3c006d;
 $hopbush: #c69;
 $mother-Btn: rgb(185, 255, 255);
 $btn-Size: 25%;
+$paddingSite: 60px;
 
+@use '_example.scss' as e;
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;700&display=swap');
+
+@mixin navUl {
+  list-style-type: none;
+    margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: $hopbush;
+}
+html {
+  background-color: rgb(252, 220, 237);
+  color: $primary-color;
+}
 body {
   font: 100% $font-stack;
-  /* @error "You messed up!" */
-  /* @warn "Don't mess it up!" */
+  /*@error "You messed up!";*/
+  /*@warn "Don't mess it up!";*/
+  padding: $paddingSite;
+  margin: 0px;
+}
+
+span {
+  color: $hopbush;
+  font-weight: 700;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 nav {
   background-color: $hopbush;
   color: $primary-color;
-  /* @debug "color is: #{$primary-color}"; */
+  @debug "color is: #{$primary-color}";
   width: auto;
+  margin: -1 * $paddingSite;
+  position: sticky;
+  top: 0px;
     ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: $hopbush;
+      @include navUl;
       position: sticky;
       top: 0;
+      text-align: center;
+    }
+
+    div {
+      margin-right: auto;
+      margin-left: auto;
     }
     
     li {
-      float: left;
+      display: inline-block;
     }
     
     li a {
@@ -38,21 +70,49 @@ nav {
     }
     
     li a:hover {
-      background-color: teal;
+      background-color: rgb(87, 0, 179);
     }
     
     .active {
-      background-color: #4CAF50;
+      background-color: #ff7bde;
     }
 }
+
+.tab4 {
+  tab-size: 8;
+}
+
 #header {
   img {
     display: block;
+    margin-top: -57px;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    margin-bottom: 70px;
+    max-height: 150px;
+    height: auto;
+    width: auto;
   }
   padding: 20px;
+}
+
+header {
+  background-color: $hopbush;
+  min-height: 30px;
+  margin-left: -1 * $paddingSite;
+  margin-right: -1 * $paddingSite;
+}
+
+.firstFlop button {
+  background: rgb(185, 255, 255);
+  width: 25%;
+  display: inline;
+}
+
+.secondFlop button {
+  background:rgb(185, 255, 255);
+  width: 25%;
+  display: inline;
 }
 
 .uno button {
@@ -64,18 +124,6 @@ nav {
 .dos button {
   background: $mother-Btn;
   width: $btn-Size;
-  display: inline;
-}
-
-.firstFlop button {
-  background:rgb(185, 255, 255);
-  width: 25%;
-  display: inline;
-}
-
-.secondFlop button {
-  background:rgb(185, 255, 255);
-  width: 25%;
   display: inline;
 }
 
@@ -91,64 +139,6 @@ nav {
 img {
   width: 50%;
 }
-
-switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-  
-  &:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-}
-input{
-  .slider {
-    :checked{
-      background-color: #2196F3;
-    }
-    :before {
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-      transform: translateX(26px);
-    }
-  }
-  :focus {
-    box-shadow: 0 0 1px #2196F3;
-  }
-}
-.slider.round {
-  border-radius: 34px;
-  ::before {
-    border-radius: 50%;
-  }
-}
-
-/* Extends example */
 
 .message-main {
   border: 1px solid #ccc;
@@ -179,9 +169,21 @@ input{
 /* @at-root example */
 foo{
   margin: 0px;
-  /* @at-root */ .column {
+  @at-root.column {
     background-color: black;
   }
 }
 
-
+@for $i from 1 to 6
+{
+  .paragraph-#{$i}
+  {
+    font-size: 10px*$i;
+    @if $i%2==0 {
+      background-color: rgb(250, 202, 209)
+    }
+    @else {
+      background-color: rgb(184, 226, 239)
+    }
+  }
+}

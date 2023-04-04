@@ -1,0 +1,16 @@
+Team Turing Testers :: Ayman Habib
+SoftDev pd0
+K27 -- Basic functions in JavaScript
+2023-04-03t
+
+DISCO
+-----------------------------------------------------------------
+* Javascript is NOT that similar to Java.
+* there is no public static main void
+* you use the dev console on google because it's a web dev lang
+=================================================================
+
+QCC
+-----------------------------------------------------------------
+* none right neow
+=================================================================

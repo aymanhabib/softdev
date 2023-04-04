@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SASS TED TALK</title>
+        <title>SASS ONE PAGER</title>
         <link rel="stylesheet" href="../static/sass.css">
     </head>
-    <body>
+    <body id="home">
         <div id="header">
             <img src="../static/sass-logo.png" alt="Sass logo">
         </div>
         
         <nav>
             <ul>
+                <div>
                 <li><a class="active" href="#home">Home</a></li>
                 <li><a href="#Installation">Installation</a></li>
                 <li><a href="#Intro to Sass">Intro to Sass</a></li>
@@ -19,6 +20,7 @@
                 <li><a href="#At Rules">At-Rules</a></li>
                 <li><a href="#Operators">Operators</a></li>
                 <li><a href="#Modules">Modules</a></li>
+            </div>
             </ul>
         </nav>
 
@@ -28,21 +30,21 @@
             <h3>Install Anywhere (Standalone)</h3>
             <div class="container">
                 <div class="image">
-                    <img src="../static/wig-install.gif">
+                    <img src="../static/wig-install.gif" style="width:300px;height:auto;">
                 </div>
                 <div class="text">
-                    <p>You can install Sass on Windows, Mac, or Linux by downloading the package for your operating system from GitHub and adding it to your PATH.</p>
+                    <p>Just like a wig install, you can install Sass on Windows, Mac, or Linux by downloading the package for your operating system from GitHub and adding it to your PATH.</p>
                 </div>
             </div>
             <h3>Install on Windows (Chocolatey) </h3>
-            If you use the Chocolatey package manager for Windows, you can install Dart Sass by running
+            If you use the Chocolatey package manager for Windows, you can install Sass by running
             <pre>
                 <code>
                     choco install sass
                 </code>
             </pre>
             <h3> Install on Mac OS X or Linux (Homebrew) </h3>
-            If you use the Homebrew package manager for Mac OS X or Linux, you can install Dart Sass by running
+            If you use the Homebrew package manager for Mac OS X or Linux, you can install Sass by running
             <pre>
                 <code>
                     brew install sass/sass/sass
@@ -52,8 +54,12 @@
 
         <div>
             <h1 id="Intro to Sass"> Intro to Sass </h1>
+            <p><span>S</span>yntactically</p>
+            <p><span>A</span>wesome</p>
+            <p><span>S</span>tyle</p>
+            <p><span>S</span>heets</p>
             <p>
-            Sass has features that don't exist in CSS yet like nesting, mixins, inheritance, and other nifty goodies that help you write robust, maintainable CSS.
+            Sass is a preprocessor scripting language that provides you with features that don't exist in CSS yet like nesting, mixins, inheritance, and other nifty goodies that help you write robust, maintainable CSS.
             </p>
             <h2>Two Syntaxes</h2>
             <!--The SCSS syntax (.scss) is used most commonly. 
@@ -62,6 +68,42 @@
                 All our examples are available in both syntaxes. -->
             <ul><code>.scss</code> - most common</ul> 
             <ul><code>.sass</code> - more unusual, indented syntax</ul>
+            <table>
+                <tr>
+                    <th>.scss</th>
+                    <th></th>
+                    <th>.sass</th>
+                </tr>
+                <tr>
+                    <td>
+                        <code>
+                            <pre class="tab4">
+                            <br>.container {
+                            <br>    float: left;
+                            <br>    width: 100%;
+                            <br>    p {
+                            <br>        color: #333;
+                            <br>    }
+                            <br>}
+                            </pre>
+                        </code>
+                    </td>
+                    <td>
+                        <br>
+                    </td>
+                    <td>
+                        <code>
+                            <pre class="tab4">
+                            <br>.container
+                            <br>    float: left
+                            <br>    width: 100%
+                            <br>p
+                            <br>   color: #333
+                        </pre>
+                        </code>
+                    </td>
+                </tr>
+            </table>
             SASS <b>CANNOT</b> be read/understood by browsers
             To make this work, you must compile sass into css by using this command: 
             <pre>
@@ -69,6 +111,7 @@
                     sass --watch input.scss output.css
                 </code>
             </pre>
+            As long as the Sass file is being "watched" your changes will automatically compile into the output.css file.
             <h2>Partials</h2>
             <p>
                 "partial" sass files contain:
@@ -80,6 +123,7 @@
                         _partial.scss
                     </code>
                 </pre>
+                <ul> For instance, if I wrote <code>@import _partials.scss</code> or <code>@use _partials.css</code> (functions you can read about in the at-rules section) in the beginning of my main scss file, then I could reference functions, variables, and classes from _partials.scss in my main scss file.</ul>
                 <!--Basically like functions. Code a css snippet in a partial and then you can reference that partial in the main css file.-->
             </p>
             <h2>Variables</h2>
@@ -103,39 +147,20 @@
                     }
                 </code>
             </pre>
-            <ul>Imperative: </ul>
-            <ul><li>Sass variables are imperative, which means if you use a variable and then change its value, the earlier use will stay the same.</li></ul>
-            <ul><li>CSS variables are declarative, which means if you change the value, it’ll affect both earlier uses and later uses.</li></ul>
+            <ul>Sass variables are imperative, which means if you use a variable and then change its value, the earlier use will stay the same.</ul>
+            <ul>CSS variables are declarative, which means if you change the value, it’ll affect both earlier uses and later uses.</ul>
             <ul>Variables that are defined by a built-in module cannot be modified.</ul>
             </p>
-            <h3>Example of variable use:</h3>
-            <div class="btn-group">
-                <div class="firstFlop">
-                    <button>Normal CSS 1</button>
-                </div>
-    
-                <div class="secondFlop">
-                    <button>Normal CSS 2</button>
-                </div>
-    
-                <div class="uno">
-                    <button>SASSY Button 1</button>
-                </div>
-    
-                <div class="dos">
-                    <button>SASSY Button 2</button>
-                </div>
-            </div> <!-- end btn grp -->
         </div> <!-- end intro to SASS -->
 
         <div>
             <h1 id="Nesting"> Nesting </h1>
-            <img src="../static/bird-nest.jpg" style="width:300px;height:auto;" >
+            <img src="../static/bird-nest.png" style="width:300px;height:auto;">
             <p>
-                <ul>Nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.</ul>
-                <ul>Overly nested rules will result in overqualified CSS</ul> <!--hard to maintain and considered bad practice-->
+                <ul>With Sass, you can nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.</ul>
+                <ul>HOWEVER! Overly nested rules will result in overqualified CSS which can cause complications in the compilation of your Sass file.</ul> <!--hard to maintain and considered bad practice-->
             </p>
-	        <br>For ex: If you have multiple buttons, you can combine all of them under one class in sass and have sub classes for each type button
+	        <br>For example: If you have multiple buttons, you can combine all of them under one class in Sass and have sub classes for each type button
             <br>Either use indent or &
             <table>
                 <th>
@@ -188,6 +213,37 @@
             <h2>@MIXIN</h2>
                 <ul>CSS Classes with similar styles?</ul>
                 <ul>Create one MIXIN class that can be mentioned in other classes!</ul>
+                <ul>For example, if I have</ul>
+                <pre class="tab4">
+                    <code>
+                        @mixin example {
+                            color: $logo-color;
+                            size: $default-size;
+                        }
+                    </code>
+                </pre>
+                <ul>and I reference that in another class using @include</ul>
+                <pre class="tab4">
+                    <code>
+                        specialText {
+                            @include example;
+                            margin-left: auto;
+                            margin-right: 100px;
+                        }
+                    </code>
+                </pre>
+                <ul>The compiled css would be:</ul>
+                <pre class="tab4">
+                    <code>
+                        specialText {
+                            color: $logo-color;
+                            size: $default-size;
+                            @include example;
+                            margin-left: auto;
+                            margin-right: 100px;
+                        }
+                    </code>
+                </pre>
             <h2>@INCLUDE</h2>
                 <ul>Allows user to include mixins in classes</ul>
             <h2>@IMPORT</h2>
@@ -197,6 +253,10 @@
                 <ul>Newer version of @import</ul>
                 <ul>Only imports desired module ONCE</ul>
                 <ul>Allows user to keep track of variables</ul> 
+                <ul>For example, let's say we have the variable $primary-color in a partial file that we reference in our main scss file.</ul>
+                <ul>HOWEVER, we also have a variable named $primary-color in our main scss file!</ul>
+                <ul>To avoid errors, you would do <code>@use exampleFile.scss as e</code> (the "e" can be whatever you want it to be)</ul>
+                <ul>Then, you can reference the partial file variable as <code>e.$primary-color</code> which will differentiate it from the $primary-color in our main file</ul>
             <h2>@FORWARD</h2>
                 <ul>Can be used prior to @use</ul>
                 <ul>"Forwards" mixins, functions, and variables from a stylesheet that are included in another stylesheet</ul>
@@ -216,11 +276,14 @@
                 <ul>Used for advanced nesting</ul>
             <h2>@ERROR</h2>
                 <ul>Causes compilation to fail with an error message</ul>
+                <ul>Include the line <code>@error [insert error message here];</code> to throw an error and output said message in terminal which will stop compilation </ul>
             <h2>@WARN</h2>
                 <ul>Prints a warning without stopping compilation entirely</ul>
+                <ul>Include the line <code>@warn [insert warn message here];</code> to throw a warning and output said message in terminal but it won't prevent compilation </ul>
             <h2>@DEBUG</h2>
             <ul>Prints a message for debugging purposes</ul>
             <ul>Can be used to double check values during compilation</ul>
+            <ul>For example, if <code>$primary-color</code> has the value #c69, the line <code>@debug "color is $primary-color";</code> will print "color is #c69" in terminal during compilation </ul>
             <h2>Flow Control</h2>
             Flow control rules like @if, @each, @for, and @while control whether or how many times styles are emitted.
             <table>
@@ -232,6 +295,9 @@
         </div> <!-- end @ rules -->
         <div>
             <h1 id="Operators">Operators</h1>
+            <div class="image">
+                <img src="../static/operator.png" style="width:300px;height:auto;">
+            </div>
             <p> 	
                 Sass supports a handful of useful operators for working with different values.
                 These include the standard mathematical operators like + and *, as well as operators for various other types:
@@ -242,11 +308,43 @@
                 <li>+, -, and / can be used to concatenate strings.</li>
             </p>
             <h2>To demonstrate...</h2>
+                If I have the following code in my file:
+                <br>
+                    <code>
+                        <br>&lt;p class=&quot;paragraph-1&quot;&gt;Sassy Slay&lt;/p&gt;
+                        <br>&lt;p class=&quot;paragraph-2&quot;&gt;Sassy Slay&lt;/p&gt;
+                        <br>&lt;p class=&quot;paragraph-3&quot;&gt;Sassy Slay&lt;/p&gt;
+                        <br>&lt;p class=&quot;paragraph-4&quot;&gt;Sassy Slay&lt;/p&gt;
+                        <br>&lt;p class=&quot;paragraph-5&quot;&gt;Sassy Slay&lt;/p&gt;
+                    </code>
+                <br>
+                <br>
+                I can use the following code: 
+                <br>
+                    <code>
+                        <pre class="tab4"><br>@for $i from 1 to 6
+                        <br>    {
+                        <br>        .paragraph-#{$i}
+                        <br>    {
+                        <br>        font-size: 10px*$i;
+                        <br>        @if $i%2==0 {
+                        <br>            background-color: rgb(250, 202, 209)
+                        <br>        }
+                        <br>        @else {
+                        <br>            background-color: rgb(184, 226, 239)
+                        <br>        }
+                        <br>    }
+                        <br>}
+                    </pre>
+                    </code>
+                To produce this:
                 <p class="paragraph-1">Sassy Slay</p>
                 <p class="paragraph-2">Sassy Slay</p>
                 <p class="paragraph-3">Sassy Slay</p>
                 <p class="paragraph-4">Sassy Slay</p>
                 <p class="paragraph-5">Sassy Slay</p>
+                If you look closely, each "paragraph" class has a number, and the for loop uses a variable "i", which references the number of each paragraph class. The for loop iterates through numbers 1 through 6 (exclusive), multiplies the font size by the paragraph number, makes the background pink if the number is even, and the background blue if it's odd.
+                Of course, this is a very primitive example of for loops, but the possibilities with functions and loops are endless.
         </div> <!-- end operators -->
 
         <div>
@@ -258,13 +356,14 @@
                 All built-in module URLs begin with sass: to indicate that they're part of Sass itself.
             </p>
             Sass provides the following built-in modules:
-            <li>The sass:math module provides functions that operate on numbers.</li>
-            <li>The sass:string module makes it easy to combine, search, or split apart strings.</li>
-            <li>The sass:color module generates new colors based on existing ones, making it easy to build color themes.</li>
-            <li>The sass:list module lets you access and modify values in lists.</li>
-            <li>The sass:map module makes it possible to look up the value associated with a key in a map, and much more.</li>
-            <li>The sass:selector module provides access to Sass’s powerful selector engine.</li>
-            <li>The sass:meta module exposes the details of Sass’s inner workings.</li>
+            <br>
+            <li>sass:math - provides functions that operate on numbers.</li>
+            <li>sass:string - makes it easy to combine, search, or split apart strings.</li>
+            <li>sass:color - generates new colors based on existing ones, making it easy to build color themes.</li>
+            <li>sass:list - lets you access and modify values in lists.</li>
+            <li>sass:map - makes it possible to look up the value associated with a key in a map, and much more.</li>
+            <li>sass:selector - provides access to Sass’s powerful selector engine.</li>
+            <li>sass:meta - exposes the details of Sass’s inner workings.</li>
         </div> <!-- end modules -->
         
     </body>
